@@ -1,0 +1,16 @@
+[package]
+name = "todo_api"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-rt = "1.1.1" # actix-web用のランタイム
+actix-web = "3.3.2" # 軽量Webフレームワーク
+serde = { version="1.0.130", features = ["derive"]  } # Serializer
+serde_json = "1.0.72" # JSON用のSerdeの拡張クレート
+thiserror = "1.0.30" # 独自エラーを作成
+rusqlite = { version = "0.26.0", features = ["bundled"] } # RustでSqliteを操作
+r2d2 = "0.8.9" # プールコネクションを管理
+r2d2_sqlite = "0.19.0" # Sqlite用のr2d2の拡張クレート
